@@ -42,6 +42,21 @@ public class DynamicProxyAppTest {
 
 	}
 
+	@Test
+	public void checkConnection() {
+
+		InvocationHandler ih = new MessageServiceHandler();
+		MessageService msMock = (MessageService) Proxy.newProxyInstance(
+				MessageService.class.getClassLoader(),
+				new Class[] { MessageService.class }, ih);
+
+		Messenger messenger = new Messenger(msMock);
+
+		assertThat(messenger.testConnection(INVALID_SERVER), equalTo(1));
+		assertThat(messenger.testConnection(VALID_SERVER), equalTo(0));
+		
+	}
+
 	
 	class MessageServiceHandler implements InvocationHandler {
 

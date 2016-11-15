@@ -22,8 +22,13 @@ public class MessageAppTest {
 
 		assertEquals(1, messenger.sendMessage(INVALID_SERVER, VALID_MESSAGE));
 		assertEquals(2, messenger.sendMessage(VALID_SERVER, INVALID_MESSAGE));
+		
+		assertEquals(2, messenger.sendMessage(INVALID_SERVER, INVALID_MESSAGE));//added
 
 		assertThat(messenger.sendMessage(VALID_SERVER, VALID_MESSAGE),
 				either(equalTo(0)).or(equalTo(1)));
+		
+		assertEquals(0, messenger.testConnection(VALID_SERVER));//added
+		assertEquals(1, messenger.testConnection(INVALID_SERVER));//added
 	}
 }
