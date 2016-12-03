@@ -48,16 +48,14 @@ public class CalculatorSteps {
 	    assertEquals(result, calculator.greater());
 	}
 	
-	
 	@When("$a is divided by 0")
-    public void testDivByZero(double a) {
-        calculator.setA(a);
-        calculator.setB(0);
-    }
+	public void testDivByZero(double a) {
+		calculator.setA(a);
+		calculator.setB(0);
+	}
 
-    @Then("infinity is returned")
-    public void returnInfinity() {
-        assertEquals(Double.POSITIVE_INFINITY, calculator.div(), APPROX);
-    }
-	
+	@Then("infinity is returned")
+	public void returnInfinity() {
+		assertEquals(Double.POSITIVE_INFINITY, calculator.div(), APPROX);
+	}
 }
