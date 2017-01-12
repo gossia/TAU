@@ -43,7 +43,7 @@ public class ButsklepWebTest extends JUnitStories {
     	System.setProperty("webdriver.chrome.driver", "C:/Users/gm/Documents/eclipse-jee-luna-SR2-win32-x86_64/chromedriver/chromedriver.exe");
 	}
 
-	@Override
+    @Override
     public Configuration configuration() {
         Class<? extends Embeddable> embeddableClass = this.getClass();
         return new SeleniumConfiguration()
@@ -68,11 +68,11 @@ public class ButsklepWebTest extends JUnitStories {
                 new WebDriverScreenshotOnFailure(driverProvider, configuration.storyReporterBuilder()));
     }
     
-	@Override
-	protected List<String> storyPaths() {
-		return new StoryFinder().findPaths(
-				codeLocationFromClass(this.getClass()).getFile(),
-				asList("**/*.story"), null);
+    @Override
+    protected List<String> storyPaths() {
+    	return new StoryFinder().findPaths(
+    			codeLocationFromClass(this.getClass()).getFile(),
+    			asList("**/*.story"), null);
 	}
 
 }
