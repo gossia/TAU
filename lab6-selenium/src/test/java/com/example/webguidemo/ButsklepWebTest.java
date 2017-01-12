@@ -41,7 +41,7 @@ public class ButsklepWebTest extends JUnitStories {
 
     public ButsklepWebTest() {
     	System.setProperty("webdriver.chrome.driver", "C:/Users/gm/Documents/eclipse-jee-luna-SR2-win32-x86_64/chromedriver/chromedriver.exe");
-	}
+    }
 
     @Override
     public Configuration configuration() {
@@ -52,9 +52,9 @@ public class ButsklepWebTest extends JUnitStories {
                 .useStepMonitor(new SeleniumStepMonitor(contextView, context, new SilentStepMonitor()))
                 .useStoryLoader(new LoadFromClasspath(embeddableClass))
                 .useStoryReporterBuilder(new StoryReporterBuilder()
-                    .withCodeLocation(codeLocationFromClass(embeddableClass))
-                    .withDefaultFormats()
-                    .withFormats(Format.CONSOLE, Format.TXT));
+                .withCodeLocation(codeLocationFromClass(embeddableClass))
+                .withDefaultFormats()
+                .withFormats(Format.CONSOLE, Format.TXT));
     }
  
     @Override
@@ -73,6 +73,6 @@ public class ButsklepWebTest extends JUnitStories {
     	return new StoryFinder().findPaths(
     			codeLocationFromClass(this.getClass()).getFile(),
     			asList("**/*.story"), null);
-	}
+    }
 
 }
