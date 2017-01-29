@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <ADDRESS CITY="Kraków" POSTALCODE="30-070" STREET="Sopocka" HOUSENUMBER="233" RESIDENTID="2"/>
+  <ADDRESS CITY="Gdynia" POSTALCODE="81-200" STREET="Starowiejska" HOUSENUMBER="22" RESIDENTID="1"/>
+</dataset>

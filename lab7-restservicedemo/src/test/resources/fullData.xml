@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <PERSON ID="1" NAME="Bolek" YOB="1967"/>
+  <PERSON ID="2" NAME="Lolek" YOB="1967"/>
+  <PERSON ID="3" NAME="Tola" YOB="1965"/>
+  <ADDRESS ID="1" CITY="Warszawa" POSTALCODE="00-950" STREET="Nowowiejska" HOUSENUMBER="345" RESIDENTID="3"/>
+  <ADDRESS ID="2" CITY="Kraków" POSTALCODE="30-070" STREET="Sopocka" HOUSENUMBER="233" RESIDENTID="2"/>
+</dataset>
